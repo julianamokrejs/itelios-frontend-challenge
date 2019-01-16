@@ -1,5 +1,4 @@
 var data =
-
 [{
     "data": {
         "widget": {

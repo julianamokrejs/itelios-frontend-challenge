@@ -1,9 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #DDDDDD;
+    background-color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
 }
 
 * {
@@ -12,7 +16,54 @@ body {
 }
 
 main {
-    background-color: #DDDDDD
+    background-color: #ffffff;}
+
+h2 {
+    color: #5b6774;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1em; 
+    color: #34404f;
+    margin: 0 0.5em;
+}
+
+h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 0.8em; 
+    color: #34404f;
+    margin: 0 0.5em;
+}
+
+span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8em; 
+    color: #34404f;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 0.8em; 
+    color: #000000;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: #5b6774;
+}
+
+a :active {
+    color: #000000;
 }
 
 .principal {
@@ -20,52 +71,130 @@ main {
     border: 1px #000000 solid;
     margin: 10%;
     width: 70%;
-    height: 80%;
+    height: 90%;
     display: inline-block;
-    h2 {
-        color: #5b6774;
-        font-family: 'Roboto Condensed', sans-serif;
-        font-weight: 700;
-        letter-spacing: 1px;
-    }&__produtos { 
+    &__produtos { 
         display: flex;
+        justify-content: center;
         height: 25em;
-    }&__footer {
-        background-color: #E0DCDB;
-        height: 15em;
-        display: flex;
-        align-items: center;
-        & img {
-            width: 2rem;
-            padding: 0.3em;
-            fill: #34404f;
-            &:hover {
-                width: 2rem;
-                padding: 0.3em;
-                fill: #fc6522;
+        margin-bottom: 5em;
+        &-visitados{
+            &-carrossel{
+                &-corpo{
+                    width: 14em;
+                    border: 1px solid lightgrey; 
+                    padding: 15px 10px 10px 10px;
+                    height: 22em;
+                    &:hover{
+                        background-image: linear-gradient(#f4f4f4, #ffffff); 
+                        transform: scale(1.1);
+                        & .principal__produtos-visitados-carrossel-corpo-btn{
+                            display: flex;
+                        }
+                    } 
+                    &-imagem img{
+                        width: 6rem;
+                    }
+                    &-preco{
+                        display: flex;
+                        align-items: baseline;
+                    }
+                    &-pagamento{
+                        display: flex;
+                        align-items: baseline;
+                        margin: 1em auto;
+                    }
+                    &-btn{
+                        background-color: #FFFFFF;
+                        color: #34404f;
+                        font-family: 'Roboto Condensed', sans-serif;
+                        font-weight: 700;
+                        display: flex;
+                        align-items: center;
+                        font-size: 1rem;
+                        padding: 0.4em 1em;
+                        border: 0px;
+                        display: none;
+                        &:hover {
+                            background-color: #FFFFFF;
+                            color: #000000;
+                            font-family: 'Roboto Condensed', sans-serif;
+                            font-weight: 700;
+                            display: flex;
+                            align-items: center;
+                            font-size: 1rem;
+                            padding: 0.4em 1em;
+                            box-shadow: -0.5em 0px #fc6522;
+                        } & img {
+                            width: 1.5em;
+                        }
+                    }
+                }
             }
         }
-        &-btn{
-            background-color: #FFFFFF;
-            color: #34404f;
-            font-family: 'Roboto Condensed', sans-serif;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            font-size: 1rem;
-            padding: 0.4em 1em;
-            border: 0px;
-            &:hover {
-                background-color: #FFFFFF;
-                color: #000000;
-                font-family: 'Roboto Condensed', sans-serif;
-                font-weight: 700;
+        &-interesses{
+            // width: 30em;
+            &-carrossel{
+                width: 100%;
                 display: flex;
-                align-items: center;
-                font-size: 1rem;
-                padding: 0.4em 1em;
-                box-shadow: -0.5em 0px #fc6522;
+                &-corpo{
+                    width: 14em;
+                    border: 1px solid lightgrey; 
+                    padding: 15px 10px 10px 10px;
+                    height: 22em;
+                    &:hover{
+                        background-image: linear-gradient(#f4f4f4, #ffffff); 
+                        transform: scale(1.1);
+                        & .principal__produtos-interesses-carrossel-corpo-btn{
+                            display: flex;
+                        }
+                    } 
+                    &-imagem img{
+                        width: 6rem;
+                    }
+                    &-preco{
+                        display: flex;
+                        align-items: baseline;
+                    }
+                    &-pagamento{
+                        display: flex;
+                        align-items: baseline;
+                        margin: 1em auto;
+                    }
+                    &-btn{
+                        background-color: #FFFFFF;
+                        color: #34404f;
+                        font-family: 'Roboto Condensed', sans-serif;
+                        font-weight: 700;
+                        display: flex;
+                        align-items: center;
+                        font-size: 1rem;
+                        padding: 0.4em 1em;
+                        border: 0px;
+                        display: none;
+                        &:hover {
+                            background-color: #FFFFFF;
+                            color: #000000;
+                            font-family: 'Roboto Condensed', sans-serif;
+                            font-weight: 700;
+                            display: flex;
+                            align-items: center;
+                            font-size: 1rem;
+                            padding: 0.4em 1em;
+                            box-shadow: -0.5em 0px #fc6522;
+                        }& img {
+                            width: 1.5em;
+                        }
+                    }
+                }
             }
+        }
+        .controles{
+            margin-top:1rem;
+            font-size: 1.2rem; 
+        }
+        .btn{
+            padding: 0.2em;
         }
     }
 }
